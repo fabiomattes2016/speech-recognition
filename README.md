@@ -14,3 +14,7 @@ python -m pip install PyAudio-0.2.11-cp39-cp39-win_amd64.whl
 ```
 python recognition.py
 ```
+
+Ele irá ativar o microfone e solicitará uma frase dita por você, fale com calma em bom tom.
+
+Ao terminar ele exibirá a frase em tela e irá repetir.
