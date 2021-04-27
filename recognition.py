@@ -31,17 +31,18 @@ def ouvir_microfone():
 
     try:
         # Passa a váriavel para o algoritmo reconhecedor de padroes
-        frase = microfone.recognize_google(audio, language="pt-BR")
+        frase = "Você disse "
+        frase = frase + microfone.recognize_google(audio, language="pt-BR")
 
         # Retorna a frase pronunciada
-        print("Você disse: " + frase)
+        print("Resultado: " + frase)
         cria_audio(frase)
+
+        return frase
 
     # Caso não reconheca retorna a excessao
     except sr.UnknownValueError:
         print("Não entendi! Tente novamente!")
-
-    return frase
 
 
 ouvir_microfone()
