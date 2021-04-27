@@ -15,15 +15,15 @@ def cria_audio(audio):
 
 # Funcao para ouvir e reconhecer a fala
 def ouvir_microfone():
-    # Habilita o microfone do usuario
+    # Habilitando o microfone do usuario
     microfone = sr.Recognizer()
 
     # Usando o microfone
     with sr.Microphone() as source:
-        # Chama um algoritmo de reducao de ruidos no som
+        # Chama o algoritmo de reducao de ruidos
         microfone.adjust_for_ambient_noise(source)
 
-        # Frase para usuario dizer algo
+        # Diga algo com calma e em bom tom
         print("Diga alguma coisa")
 
         # Armazena o que foi dito numa variavel
@@ -37,7 +37,7 @@ def ouvir_microfone():
         print("Você disse: " + frase)
         cria_audio(frase)
 
-    # Se nao reconheceu o padrão de fala, exibe a mensagem
+    # Caso não reconheca retorna a excessao
     except sr.UnknownValueError:
         print("Não entendi! Tente novamente!")
 
