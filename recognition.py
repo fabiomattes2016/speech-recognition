@@ -43,6 +43,7 @@ def ouvir_microfone():
     # Caso não reconheca retorna a excessao
     except sr.UnknownValueError:
         print("Não entendi! Tente novamente!")
+        cria_audio("Não entendi! Tente novamente!")
 
 
 ouvir_microfone()
