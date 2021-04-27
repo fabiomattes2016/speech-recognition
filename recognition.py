@@ -35,7 +35,7 @@ def ouvir_microfone():
         frase = frase + microfone.recognize_google(audio, language="pt-BR")
 
         # Retorna a frase pronunciada
-        print("Resultado: " + frase)
+        print(frase)
         cria_audio(frase)
 
         return frase
