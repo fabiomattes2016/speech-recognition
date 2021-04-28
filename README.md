@@ -2,6 +2,8 @@
 
 ## Comandos
 
+Usar o python 3.9!!!
+
 1.Instalando as depêndencias (Se for rodar no windows deve ter o build tools 14 instalado)
 
 ```
